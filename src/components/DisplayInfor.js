@@ -3,10 +3,26 @@ import './DisplayInfor.scss'
 import logo from '../logo.svg'
 
 class DisplayInfor extends React.Component {
-    state = {
-        isShowListUser: true
+
+    constructor(props) {
+        console.log("--> call constructer");
+        super(props)
+        this.state = {
+            isShowListUser: true
+        }
     }
-    
+
+    componentDidMount() {
+        console.log("--> call componentDidMount");
+        setTimeout(() => {
+            document.title = "New Document after submit"
+        }, 3000)
+    }
+
+    componentDidUpdate() {
+
+    }
+
     handleShowHide = () => {
         this.setState({
             isShowListUser: !this.state.isShowListUser
@@ -15,6 +31,7 @@ class DisplayInfor extends React.Component {
 
     // JSX
     render() {
+        console.log("--> call render");
         const { listUsers } = this.props;
         // props => viết tắt của properties
         return (
