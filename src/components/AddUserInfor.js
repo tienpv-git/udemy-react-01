@@ -28,7 +28,7 @@ class AddUserInfor extends React.Component {
     handleOnSubmit = (event) => {
         event.preventDefault();
         this.props.handleAddNewUser({
-            id: this.getRndInteger(10, 20) + this.getRndInteger(10, 20),
+            id: this.getRndInteger(10, 100),
             name: this.state.name,
             age: this.state.age
         })
