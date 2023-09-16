@@ -7,17 +7,17 @@ class MyComponent extends React.Component {
             {
                 id: 1,
                 name: "Pham Tien",
-                age: "23",
+                age: "69",
             },
             {
                 id: 2,
                 name: "Tran Doanh",
-                age: "23",
+                age: "26",
             },
             {
                 id: 3,
                 name: "Hoang Ngoan",
-                age: "22",
+                age: "18",
             },
         ],
     };
@@ -27,6 +27,7 @@ class MyComponent extends React.Component {
         return (
             <div>
                 <UserInfor />
+                <br />
                 <DisplayInfor listUsers={this.state.listUsers} />
             </div>
         );
