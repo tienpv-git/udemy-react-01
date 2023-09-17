@@ -1,17 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './DisplayInfor.scss'
 import logo from '../logo.svg'
 
 
 
 const DisplayInfor = (props) => {
+    const { listUsers } = props;
+
     const [islistUserShow, setShowHideListUser] = useState(true);
 
     const handleOnShowHide = () => {
         setShowHideListUser(!islistUserShow)
     }
 
-    const { listUsers } = props;
+    console.log("--> Call me render")
+
+    useEffect(() => {
+        if (listUsers.length === 0) {
+            alert("No more elements in listUsers!")
+        }
+        console.log("--> Call me useEffect")
+    }, [listUsers])
+
     // props => viết tắt của properties
     return (
         <div className="display-infor-container">
