@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import './DisplayInfor.scss'
 import logo from '../logo.svg'
 
@@ -33,12 +33,25 @@ import logo from '../logo.svg'
 //     }
 // }
 
+
+
 const DisplayInfor = (props) => {
+    const [islistUserShow, setShowHideListUser] = useState(true);
+
+    const handleOnShowHide = () => {
+        setShowHideListUser(!islistUserShow)
+    }
+
     const { listUsers } = props;
     // props => viết tắt của properties
     return (
         <div className="display-infor-container">
-            {true &&
+            <div>
+                <span onClick={() => handleOnShowHide()}>
+                    {islistUserShow ? "Hidden list users" : "Show list users"}
+                </span>
+            </div>
+            {islistUserShow &&
                 <div>
                     {listUsers.map((user) => {
                         return (
