@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import './DisplayInfor.scss'
 import logo from '../logo.svg'
 
-
-
 const DisplayInfor = (props) => {
     const { listUsers } = props;
 
