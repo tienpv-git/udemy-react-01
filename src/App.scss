@@ -13,7 +13,7 @@ body {
             .nav-link {
                 &.active {
                     // class active ngang hàng với class nav-link vì vậy cần thêm ký tự '&' vào trước class
-                    color: red;
+                    color: #3399ff;
                 }
             }
         }

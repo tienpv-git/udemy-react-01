@@ -12,7 +12,7 @@ import {
 } from "react-router-dom";
 import UserComponent from "./components/User/UserComponent";
 import AdminComponent from "./components/Admin/AdminComponent";
-
+import HomeComponent from "./components/Home/HomeComponent"
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -22,6 +22,7 @@ root.render(
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<App />}>
+                    <Route index element={<HomeComponent />}></Route>
                     <Route path="user" element={<UserComponent />}></Route>
                     <Route path="admin" element={<AdminComponent />}></Route>
                 </Route>
